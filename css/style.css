@@ -37,6 +37,16 @@
   box-sizing: border-box;
 }
 
+.spelCitat {
+  font-family: "SquidGame";
+  font-size: 16px;
+  color: #1aff00;
+  line-height: 2;
+  margin: -20px auto 0;
+  /* litet avstånd över texten, minska för ännu mindre */
+  margin-left: 45px;
+}
+
 body {
   /* Tar bort webbläsarens standardmarginal */
   margin: 0;
@@ -165,13 +175,13 @@ main {
 
 /* Textdelen: får växa upp till 34rem bred */
 .intro-text {
-  flex: 0 1 34rem;
+  flex: 1 1 100%;
 }
 
 /* Tar resten av raden och centrerar rutan i det utrymmet */
 .doll-area {
   /* Tar upp resten av raden, minst ca 280px */
-  flex: 1 1 280px;
+  flex: 1 1 100%;
   display: flex;
   /* Centrerar rutnätet vågrätt */
   justify-content: center;
@@ -180,11 +190,12 @@ main {
 .doll-grid {
   display: grid;
   /* Två bredvid varandra */
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   /* Mellanrum mellan blocken */
   gap: 0.75rem;
   /* Ändra storleken på hela rutan här */
-  width: clamp(220px, 28vw, 360px);
+  width: 100%;
+  margin: 0 auto;
 }
 
 .doll-block {
@@ -198,9 +209,7 @@ main {
 
 .doll-block img {
   width: 100%;
-  height: 100%;
-  /* Bilden fyller blocket utan att tänjas */
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -230,7 +239,8 @@ main {
 
 /* ">" betyder att det bara gäller h2 som ligger direkt i .about */
 .about>h2 {
-  /* Stor rubrik som växer med skärmen */
+  /*  rubrik  */
+  font-family: squidGame;
   font-size: clamp(2rem, 5vw, 3.5rem);
   letter-spacing: -0.03em;
   margin: 0 0 2rem;
@@ -264,6 +274,15 @@ main {
 .cols p {
   margin: 0 0 1em;
   max-width: 34rem;
+}
+
+.about .cols img,
+.about .cols video {
+  display: block;
+  width: 100%;
+  /* max-width: 300px; */
+  height: auto;
+  margin: 1rem 0 0;
 }
 
 
