@@ -45,6 +45,7 @@
   margin: -20px auto 0;
   /* litet avstånd över texten, minska för ännu mindre */
   margin-left: 45px;
+  margin-top: 10px;
 }
 
 body {
@@ -131,8 +132,6 @@ main,
   font-family: "SquidGame";
   font-weight: 700;
   font-size: 40px;
-  /* Bokstäverna sitter lite tätare */
-  letter-spacing: -0.02em;
   /* Ingen understrykning */
   text-decoration: none;
 }
@@ -166,25 +165,26 @@ main {
   flex-wrap: wrap;
   gap: var(--gap);
   /* Avsnittet blir aldrig bredare än så här */
-  max-width: 80rem;
+  max-width: 1080px;
   /* Luft över och under som anpassar sig till skärmhöjden */
-  padding: clamp(2rem, 10vh, 6rem) 0;
-  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  padding: 60px 0;
+  font-size: 20px;
   line-height: 1.4;
 }
 
 /* Textdelen: får växa upp till 34rem bred */
 .intro-text {
   flex: 1 1 100%;
+  order: 2;
 }
 
 /* Tar resten av raden och centrerar rutan i det utrymmet */
 .doll-area {
-  /* Tar upp resten av raden, minst ca 280px */
   flex: 1 1 100%;
   display: flex;
-  /* Centrerar rutnätet vågrätt */
   justify-content: center;
+  order: 1;
+  margin-top: 50px;
 }
 
 .doll-grid {
@@ -201,8 +201,6 @@ main {
 .doll-block {
   /* Röd ram */
   border: 3px solid #ff0000;
-  /* Alla block blir kvadratiska och lika stora */
-  aspect-ratio: 1 / 1;
   /* Döljer det som sticker utanför blocket */
   overflow: hidden;
 }
@@ -258,10 +256,11 @@ main {
 
 /* Små rubriker (Process, Learning osv.) i dämpad grå färg */
 .cols h3 {
+  font-family: squidGame;
   font-size: 1rem;
   /* Normal tjocklek istället för fet */
   font-weight: 400;
-  color: var(--muted);
+  color: greenyellow;
   margin: 0 0 0.6rem;
 }
 
