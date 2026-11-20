@@ -1,4 +1,4 @@
-/* Laddar in det egna typsnittet "SquidGame" från fontmappen */
+/* Laddar in typsnittet "SquidGame" från fontmappen */
 @font-face {
   font-family: "SquidGame";
   src: url("../fonts/squidGame.ttf");
@@ -30,26 +30,26 @@
 
 /* uppbygnad */
 
-/* Padding och ram räknas in i elementens bredd, vilket gör layouten enklare att räkna på */
+/* väljer alla element på sidan */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* citat under sidans huvudrubrik */
 .spelCitat {
   font-family: "SquidGame";
   font-size: 16px;
   color: #1aff00;
   line-height: 2;
   margin: -20px auto 0;
-  /* litet avstånd över texten, minska för ännu mindre */
+  /* litet avstånd över texten */
   margin-left: 45px;
   margin-top: 10px;
 }
 
 body {
-  /* Tar bort webbläsarens standardmarginal */
   margin: 0;
   /* Svart bakgrund */
   background: var(--paper);
@@ -63,13 +63,7 @@ body {
   line-height: 1.5;
 }
 
-/* Dockbild (klassen används inte i HTML-filen du visat) */
-.doll {
-  width: 400px;
-  /* Höjden följer bildens proportioner */
-  height: auto;
-  display: block;
-}
+
 
 /* Länkar får samma färg som texten runt omkring, och understrykningen sitter lite längre ner */
 a {
@@ -82,13 +76,7 @@ a:hover {
   color: var(--accent);
 }
 
-/* Tydlig ram runt det man valt med tangentbordet (viktigt för tillgänglighet) */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
 
-/* Canvasen ligger fast bakom sidan och släpper igenom klick */
 #stage {
   /* Ligger kvar när man scrollar */
   position: fixed;
@@ -128,7 +116,7 @@ main,
 }
 
 .logo {
-  /* Det egna typsnittet */
+  /* typsnittet */
   font-family: "SquidGame";
   font-weight: 700;
   font-size: 40px;
@@ -176,7 +164,7 @@ main {
   flex: 1 1 100%;
   order: 2;
   border: 1px solid var(--ink);
-  /* tunn röd ram */
+  /* röd ram */
   border-radius: 24px;
   /* rundade hörn */
   padding: 24px 32px;
@@ -217,7 +205,7 @@ main {
 }
 
 
-/* Rubrik "Klara Johansson" */
+/* Rubrik  */
 .intro h1 {
   font-size: 30px;
   /* Tätt radavstånd */
@@ -258,13 +246,13 @@ main {
   gap: var(--gap) calc(var(--gap) * 2);
   max-width: 64rem;
   border: 1px solid var(--ink);
-  /* NY: tunn röd ram runt texten och bilderna */
+  /* röd ram runt texten och bilderna */
   border-radius: 24px;
-  /* NY: rundade hörn */
+  /* rundade hörn */
   padding: 32px;
 }
 
-/* Små rubriker (Process, Learning osv.) i dämpad grå färg */
+/* Små rubriker  */
 .cols h3 {
   font-family: squidGame;
   font-size: 1rem;

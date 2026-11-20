@@ -25,7 +25,6 @@ app.stage.addChild(fieldLayer);
 
 
 // färger
-
 // Ett objekt där färgerna sparas
 const colours = {};
 
@@ -40,12 +39,9 @@ function readColours() {
 
 // Läser färgerna direkt när sidan laddas
 readColours();
-// Läser dem igen om besökaren byter mellan ljust och mörkt läge
-matchMedia("(prefers-color-scheme: dark)").addEventListener("change", readColours);
 
 
 // input
-// Här lyssnar koden på musen/fingret
 
 // Var pekaren är just nu. Startar långt utanför skärmen så att inget knuffas i början
 const pointer = { x: -9999, y: -9999 };
@@ -66,13 +62,13 @@ window.addEventListener("pointerdown", (e) => {
 
 
 // punkter
-// avstånd mellan prickarna (px)
+// avstånd mellan prickarna i pixlar
 const SPACING = 28;
-// hur nära pekaren en prick måste vara för att knuffas (px)         
+// hur nära pekaren en prick måste vara för att knuffas      
 const PUSH_RADIUS = 150;
 // pixels per second (hur snabbt vågen växer)   
 const RIPPLE_SPEED = 500;
-// milliseconds (hur länge en våg lever)  
+// millisekunder (hur länge vågen visas)
 const RIPPLE_LIFE = 2000;
 
 // Lista med alla prickar
@@ -169,6 +165,8 @@ window.addEventListener("resize", buildField);
 // frame loop
 
 app.ticker.add(() => {
-  updateField(performance.now()); // räkna ut nya positioner
-  drawField();                    // rita dem
+  // räkna ut nya positioner
+  updateField(performance.now());
+  // rita dem
+  drawField();
 });
