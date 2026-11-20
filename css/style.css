@@ -172,10 +172,15 @@ main {
   line-height: 1.4;
 }
 
-/* Textdelen: får växa upp till 34rem bred */
 .intro-text {
   flex: 1 1 100%;
   order: 2;
+  border: 1px solid var(--ink);
+  /* tunn röd ram */
+  border-radius: 24px;
+  /* rundade hörn */
+  padding: 24px 32px;
+  /* luft mellan ramen och texten */
 }
 
 /* Tar resten av raden och centrerar rutan i det utrymmet */
@@ -252,6 +257,11 @@ main {
   /* Radavstånd, och dubbelt så stort mellan kolumner */
   gap: var(--gap) calc(var(--gap) * 2);
   max-width: 64rem;
+  border: 1px solid var(--ink);
+  /* NY: tunn röd ram runt texten och bilderna */
+  border-radius: 24px;
+  /* NY: rundade hörn */
+  padding: 32px;
 }
 
 /* Små rubriker (Process, Learning osv.) i dämpad grå färg */
